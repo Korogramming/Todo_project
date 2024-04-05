@@ -1,14 +1,15 @@
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 import tkinter as tk
 
 def main():
-    font = ('MS ゴシック', 12)
     playGround = tk.Tk()
 
     playGround.title('Todoアプリ')
-    label = tk.Label(text='ラベル', font=font)
+    label = tk.Label(text='日本語対応なっていますか？')
     label.place(x=30, y=70)
+    playGround.option_add('*Font', 'MS ゴシック 12')
     playGround.mainloop()
 
 
