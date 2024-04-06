@@ -7,9 +7,26 @@ def main():
     playGround = tk.Tk()
 
     playGround.title('Todoアプリ')
-    label = tk.Label(text='日本語対応なっていますか？')
-    label.place(x=30, y=70)
-    playGround.option_add('*Font', 'MS ゴシック 12')
+    playGround.geometry('1000x580')
+    menubar = tk.Menu(playGround)
+    playGround.config(menu = menubar)
+
+    def callback():
+        playGround.quit()
+
+    file = tk.Menu(menubar)
+    menubar.add_cascade(label="tkinter", menu=file)
+    file.add_command(label='閉じる', command = callback)
+
+    edit = tk.Menu(menubar)
+    menubar.add_cascade(label='エディット', menu=edit)
+    label = tk.Label(text='tkinter勉強中', foreground='blue', background='white')
+    #label.place(x=450, y=200)
+    label.pack()
+
+    txtBox = tk.Entry(width=100)
+    txtBox.pack()
+
     playGround.mainloop()
 
 
